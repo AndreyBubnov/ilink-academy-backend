@@ -26,11 +26,7 @@ export class UsersService {
   }
 
   findByName(name: string) {
-    return this.usersRepository.find({
-      where: {
-        name,
-      },
-    });
+    return this.usersRepository.find({ name });
   }
 
   async update(id: number, updateUserDto: UpdateUserDto) {
